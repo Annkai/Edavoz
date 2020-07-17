@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>edavoz.by</title>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <div class="logo-cont"><img src="img/logo.svg" class="logo-img"></div>
+
+
+
+    <!-- ПЕРВЫЙ ЭТАП - Список покупок -->
+
+    <div class="start-info-cont" id="stageOne">
+        <h1>Форма заказа Edavoz.by</h1>
+        <p>Edavoz сходит в магазин вместо вас и привезет покупки на дом!</p>
+        <p>После отправки данной формы заказа наш диспетчер свяжется с вами для подтверждения и уточнения всех деталей.</p>
+        <p>В случае возникновения вопросов при оформлении заказа,пожалуйста, свяжитесь с нашим диспетчером по электронной почте zakaz@edavoz.by или по телефону ...</p>
+
+        <div class="menu-cont">
+
+            <div class="this-stage">1</div>
+
+
+            <div class="rectangle-el"></div>
+
+            <div class="circle-el">
+                <div class="inner-circle">2</div>
+            </div>
+
+            <div class="rectangle-el"></div>
+
+            <div class="circle-el">
+                <div class="inner-circle">3</div>
+            </div>
+
+            <div class="rectangle-el"></div>
+
+            <div class="circle-el">
+                <div class="inner-circle"><span class="four">4</span></div>
+            </div>
+
+        </div>
+
+        <div class="menu-list">
+            <div class="menu-text this-list">Список покупок</div>
+            <div class="menu-text">Доставка</div>
+            <div class="menu-text">Контакты</div>
+            <div class="menu-text">Оплата</div>
+        </div>
+
+        <p class="upload-list">Список покупок (загрузить)</p>
+
+        <p>Если ваш список покупок составлен в Word, pdf, вы написали его на бумаге и сделали фото. Загрузите его сюда</p>
+
+        <button class="button upload-files-button">Загрузить файлы</button>
+
+        <p class="upload-list">Список покупок (из каталога)</p>
+
+        <div class="catalog-cont">
+
+            <div class="plus-minus-cont" id="plusCont">
+                <img src="img/plus.png" class="plus-icon" id="plusIcon">
+            </div>
+
+
+            <div class="plus-minus-cont" id="minusCont">
+                <img src="img/minus.png" class="minus-icon" id="minusIcon">
+            </div>
+
+            <span class="catalog-text">Каталог товаров</span>
+
+        </div>
+
+
+
+        <div class="product-menu-cont" id="productMenuCont">
+
+            <ul class="product-menu-list" id="productMenuList"></ul>
+
+        </div>
+
+        <form method="" action="" id="catalogForm">
+
+            <div class="product-list-cont" id="productListCont">
+
+                <div class="inner-product-list-cont" id="innerProductListCont"></div>
+
+            </div>
+        </form>
+
+        <button class="button next-button" id="stageOneButton">Далее</button>
+
+    </div>
+
+
+    <!-- ВТОРОЙ ЭТАП - Доставка -->
+
+    <div class="start-info-cont" id="stageTwo">
+
+        <div class="menu-cont">
+
+            <div class="circle-el">
+                <div class="inner-circle passed-stage">
+                    <img src="img/menu-mark.png" class="menu-mark">
+                </div>
+            </div>
+
+            <div class="rectangle-el full-el"></div>
+
+            <div class="this-stage">2</div>
+
+            <div class="rectangle-el"></div>
+
+            <div class="circle-el">
+                <div class="inner-circle">3</div>
+            </div>
+
+            <div class="rectangle-el"></div>
+
+            <div class="circle-el">
+                <div class="inner-circle"><span class="four">4</span></div>
+            </div>
+
+        </div>
+
+        <div class="menu-list">
+            <div class="menu-text marked-list">Список покупок</div>
+            <div class="menu-text this-list delivery-two-text">Доставка</div>
+            <div class="menu-text">Контакты</div>
+            <div class="menu-text">Оплата</div>
+        </div>
+
+        <p class="retail-chain">Выбор розничной сети</p>
+
+
+
+        <div id="retailerCont">
+            <span class="page-two-h">Важно ли вам в какой розничной сети делать покупки?</span><br/>
+            <input type="checkbox" class="check-input" id="important"><span class="page-two-check">Важно</span><br/>
+            <input type="checkbox" class="check-input" id="neverMind"><span class="page-two-check">Не важно</span><br/>
+        </div>
+
+        <form id="shopForm">
+            <div class="retail-chains-cont" id="retailChainsCont">
+                <p>Укажите, где нам приобрести продукты из вашего списка покупок:</p>
+            </div>
+        </form>
+
+        <p class="retail-chain data-delivery">Дата и время доставки</p>
+
+        <p class="page-two-h">Время работы доставки: c 10.00 до 00.00</p>
+        <p class="page-two-h delivery-terms">Если форма заказа была оформлена с 00.00 до 16.00, то доставка может быть осуществлена в этот же день. *По г.Минску и в пределах МКАД** Стоимость 10р.</p>
+
+        <form id="customerForm">
+            <input type="date" class="page-two-input" name="delivery_date" id="datePicker" required>
+
+            <p class="page-two-h pick-time">В какое время вам удобнее получить ваш заказ?</p>
+
+            <select class="page-two-input" name="delivery_time">
+        <option>c 10.00 до 14.00</option>
+        <option>c 14.00 до 18.00</option>
+        <option>c 18.00 до 00.00</option>
+      </select>
+
+
+            <p class="retail-chain address-delivery">Адрес доставки</p>
+
+
+            <p class="page-two-h">Город</p>
+            <img src="img/squareIcon.png" class="square-icon"><span class="page-two-h delivery-terms minsk">Минск</span><br/>
+
+            <p class="page-two-h before-input">Улица</p>
+            <input type="text" placeholder="ул.Ленина" class="page-two-input" name="street"><br/>
+
+            <p class="page-two-h before-input">Дом</p>
+            <input type="text" placeholder="2" class="page-two-input" name="house"><br/>
+
+            <p class="page-two-h before-input">Корпус</p>
+            <input type="text" placeholder="3" class="page-two-input" name="housing"><br/>
+
+            <p class="page-two-h before-input">Подъезд</p>
+            <p class="page-two-h delivery-terms">Если номер подьезда отсутствует, в графе ниже поставте 0</p>
+            <input type="text" placeholder="4" class="page-two-input" name="porch">
+
+            <p class="page-two-h before-input">Этаж</p>
+            <p class="page-two-h delivery-terms">Если вы проживаете в частном доме, в графе ниже укажите 0</p>
+            <input type="text" placeholder="5" class="page-two-input" name="floor">
+
+            <p class="page-two-h before-input">Квартира</p>
+            <p class="page-two-h delivery-terms">Если вы проживаете в частном доме, в графе ниже укажите 0</p>
+            <input type="text" placeholder="6" class="page-two-input" name="apartment">
+
+            <button class="button next-button" id="stageTwoButton">Далее</button>
+
+    </div>
+
+
+
+
+    <!-- ТРЕТИЙ ЭТАП - Контакты -->
+
+    <div class="start-info-cont" id="stageThree">
+
+        <div class="menu-cont">
+
+            <div class="circle-el">
+                <div class="inner-circle passed-stage">
+                    <img src="img/menu-mark.png" class="menu-mark">
+                </div>
+            </div>
+
+            <div class="rectangle-el passed-full-el"></div>
+
+            <div class="circle-el">
+                <div class="inner-circle passed-stage">
+                    <img src="img/menu-mark.png" class="menu-mark">
+                </div>
+            </div>
+
+            <div class="rectangle-el full-el"></div>
+
+            <div class="this-stage">3</div>
+
+            <div class="rectangle-el"></div>
+
+            <div class="circle-el">
+                <div class="inner-circle"><span class="four">4</span></div>
+            </div>
+
+        </div>
+
+        <div class="menu-list">
+            <div class="menu-text marked-list">Список покупок</div>
+            <div class="menu-text this-list delivery-two-text marked-list">Доставка</div>
+            <div class="menu-text">Контакты</div>
+            <div class="menu-text">Оплата</div>
+        </div>
+
+        <p class="retail-chain">Контакты</p>
+
+
+        <p class="page-two-h before-input">Имя</p><input type="text" placeholder="Иван" class="page-two-input" name="first_name"><br/>
+        <p class="page-two-h before-input">Фамилия</p><input type="text" placeholder="Иванов" class="page-two-input" name="last_name"><br/>
+        <p class="page-two-h before-input">Телефон</p><input type="text" placeholder="+375 (99)999-99-99" class="page-two-input" name="phone"><br/>
+        <p class="page-two-h before-input">E-mail</p><input type="text" placeholder="mail@gmail.com" class="page-two-input" name="emai"><br/>
+
+        </form>
+        <button class="button next-button" id="stageThreeButton">Далее</button>
+
+    </div>
+
+
+
+    <!-- ЧЕТВЕРТЫЙ ЭТАП - Оплата -->
+
+    <div class="start-info-cont" id="stageFour">
+
+        <div class="menu-cont">
+
+            <div class="circle-el">
+                <div class="inner-circle passed-stage">
+                    <img src="img/menu-mark.png" class="menu-mark">
+                </div>
+            </div>
+
+            <div class="rectangle-el passed-full-el"></div>
+
+            <div class="circle-el">
+                <div class="inner-circle passed-stage">
+                    <img src="img/menu-mark.png" class="menu-mark">
+                </div>
+            </div>
+
+            <div class="rectangle-el passed-full-el"></div>
+
+            <div class="circle-el">
+                <div class="inner-circle passed-stage">
+                    <img src="img/menu-mark.png" class="menu-mark">
+                </div>
+            </div>
+
+            <div class="rectangle-el passed-full-el"></div>
+
+
+            <div class="this-stage passed-number">4</div>
+
+        </div>
+
+        <div class="menu-list">
+            <div class="menu-text marked-list">Список покупок</div>
+            <div class="menu-text this-list delivery-two-text marked-list">Доставка</div>
+            <div class="menu-text delivery-two-text  marked-list">Контакты</div>
+            <div class="menu-text marked-list">Оплата</div>
+        </div>
+
+        <p class="retail-chain">Форма оплаты</p>
+
+        <p class="page-two-h payment-form">Выберите форму оплаты:</p>
+
+        <form id="paymentForm">
+            <div id="paymentCont">
+                <input type="checkbox" name="payment_type" value="cash" class="check-input" id="cash"><span class="page-two-check">наличными при получении</span><br/>
+                <input type="checkbox" name="payment_type" value="card" class="check-input" id="card"><span class="page-two-check">банковской картой при получении</span><br/>
+                <input type="checkbox" name="payment_type" value="online" class="check-input" id="online"><span class="page-two-check">онлайн-оплата</span><br/>
+            </div>
+        </form>
+
+        <div class="online-payment-cont" id="onlinePaymentCont">
+
+            <div class="order-box">
+                <p>Номер заказа</p>
+                <p>Идентификатор плательщика</p>
+                <p>Сумма</p>
+                <p>Способ оплаты</p>
+            </div>
+
+            <div class="number-order-box">
+
+                <p>1025003</p>
+                <p>194595</p>
+                <input type="text" placeholder="p." class="sum-input">
+                <p>Банковская карта</p>
+
+            </div>
+
+            <hr class="line">
+
+            <div class="card-wrapper">
+                <div class="card-back">
+                    <div class="card-back-line"></div>
+                    <input type="text" class="cvc" placeholder="CVC">
+                    <div class="card-back-text">Три цифры с обратной стороны карты</div>
+                </div>
+                <div class="card-front">
+                    <img src="img/mastercard.svg" alt="" class="card-master">
+                    <img src="img/maestro.svg" alt="" class="card-maestro">
+                    <img src="img/visa.svg" alt="" class="card-visa">
+                    <input type="text" class="card-number" placeholder="Номер карты">
+                    <input type="text" class="card-to-month" placeholder="MM">
+                    <div class="slash">/</div>
+                    <input type="text" class="card-to-year" placeholder="ГГ">
+                    <div class="valid-thru">VALID THRU</div>
+                </div>
+            </div>
+
+        </div>
+
+        <input type="submit" value="Оплатить" class="button next-button" id="stageFourButton">
+
+
+
+        <script src="serialize.js"></script>
+        <script src="script.js"></script>
+</body>
+
+</html>

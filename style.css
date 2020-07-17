@@ -1,0 +1,677 @@
+html,
+body {
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: Roboto;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-cont {
+    /* width: 414px; */
+    width: 100%;
+    margin: 0 auto;
+    height: 158px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.logo-img {
+    height: 158px;
+}
+
+
+/* Первый этап - Список покупок*/
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.start-info-cont {
+    position: absolute;
+    top: 179px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    /* border: 1px solid salmon; */
+    width: 301px;
+    font-size: 0.96em;
+    line-height: 1.1;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: -0.05em;
+}
+
+.menu-cont {
+    width: 315px;
+    height: 40px;
+    /* border: 2px solid rgb(47, 120, 216); */
+    margin-left: -5px;
+}
+
+.circle-el {
+    float: left;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #f2f2f4;
+    border: 1px solid #d9d9db;
+    position: relative;
+}
+
+.inner-circle {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 26px;
+    height: 26px;
+    background-color: #f9f9f9;
+    border-radius: 50%;
+    border: 1px solid #e0e0e2;
+    font-size: 20px;
+    color: #d2d2d5;
+}
+
+
+/* .four {
+    margin-right: 3px;
+} */
+
+.rectangle-el {
+    float: left;
+    width: 59.6px;
+    height: 8px;
+    border-top: 2px solid #dbdbdd;
+    background-color: #f1f0f5;
+    margin-top: 12px;
+}
+
+.categories {
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 9px;
+    margin-left: -11px;
+}
+
+
+/* ТЕКУЩИЙ ЭТАП */
+
+.this-stage {
+    float: left;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    /*border: 1px solid #82c5d4;*/
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: 800;
+    background-color: #018cb8;
+    color: #f2fdf9;
+    margin-top: -1.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-list {
+    width: 330px;
+    height: 40px;
+    /* border: 2px solid sandybrown; */
+    margin-bottom: 8px;
+    float: left;
+    margin-left: -5px;
+}
+
+.menu-list div:first-child {
+    margin-right: 40px;
+    margin-left: -3px;
+}
+
+.menu-list div:nth-child(2) {
+    margin-right: 41px;
+}
+
+.menu-list div:nth-child(3) {
+    margin-right: 49px;
+}
+
+.this-list {
+    color: #389aac;
+    font-weight: bolder;
+}
+
+.menu-text {
+    float: left;
+    width: 50px;
+    font-size: 13px;
+}
+
+.upload-list {
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.button {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    background-color: #000000;
+    color: aliceblue;
+    border-radius: 5px;
+    outline: none;
+    border: 0;
+}
+
+.upload-files-button {
+    width: 156px;
+    height: 35px;
+}
+
+.catalog-cont {
+    margin-top: -6px;
+    float: left;
+    position: relative;
+}
+
+.catalog-text {
+    font-size: 26px;
+    font-weight: bold;
+    color: #4d89bc;
+    float: left;
+    margin-left: 2px;
+}
+
+.plus-minus-cont {
+    cursor: pointer;
+    float: left;
+    margin-left: -9px;
+}
+
+.plus-icon {
+    width: 32px;
+    margin-top: -1px;
+}
+
+.minus-icon {
+    width: 32px;
+    margin-top: -1px;
+    display: none;
+}
+
+.product-menu-cont {
+    margin-left: -7.5px;
+    margin-top: 60px;
+    width: 316px;
+    height: 150px;
+    border: 2px solid #d9c26c;
+    background-color: #fffaf4;
+    position: relative;
+    display: none;
+    overflow: auto;
+}
+
+.product-list-cont {
+    width: 301px;
+    height: 267px;
+    margin-top: 60px;
+    background-color: #c4c4c4;
+}
+
+.inner-product-list-cont {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 285px;
+    height: 250px;
+    background-color: #ffffff;
+    overflow: auto;
+}
+
+td {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+th {
+    font-size: 16px;
+}
+
+.goods-quantity {
+    width: 50px;
+    text-align: right;
+    outline: none;
+    border: none;
+}
+
+.add-checkmark {
+    background-image: url(img/checkbox.png);
+    background-repeat: no-repeat;
+    background-size: 19px;
+}
+
+.next-button {
+    width: 150px;
+    height: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.product-menu-list {
+    margin-top: 12.5px;
+    margin-left: -15px;
+    list-style-type: none;
+}
+
+.add-color {
+    color: #6a9b52;
+}
+
+.product-menu-cont::before {
+    display: none;
+    content: '';
+    position: absolute;
+    left: 11px;
+    bottom: 92px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid #d9c26c;
+}
+
+
+/* Таблица */
+
+table:not(:first-child) {
+    display: none;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.name-td {
+    width: 80%;
+}
+
+
+/* Второй этап - Доставка */
+
+#stageOne {
+    display: block;
+}
+
+#stageTwo {
+    display: none;
+    /* border: 1px solid palevioletred; */
+    margin-top: 5px;
+}
+
+#stageThree {
+    display: none;
+}
+
+#stageFour {
+    display: none;
+}
+
+.passed-stage {
+    background-color: #99c72a;
+    border: none;
+}
+
+.delivery-two-text {
+    margin-left: -3px;
+}
+
+.full-el {
+    background-color: #018cb8;
+}
+
+.passed-full-el {
+    background-color: #99c72a;
+}
+
+.marked-list {
+    color: #a0b45a;
+    font-weight: bolder;
+}
+
+.menu-mark {
+    width: 27px;
+}
+
+.retail-chain {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.retail-chains-cont {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 321px;
+    display: none;
+    float: left;
+}
+
+.square-icon {
+    width: 19px;
+}
+
+.page-two-h {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.page-two-check,
+.check-input {
+    font-weight: 400;
+    margin-top: 13px;
+    margin-left: 6px;
+}
+
+.check-input {
+    position: relative;
+    top: 2px;
+}
+
+.data-delivery {
+    margin-top: 38px;
+    margin-bottom: 22px;
+}
+
+.delivery-terms {
+    font-size: 13.7px;
+}
+
+.page-two-input {
+    width: 301px;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid #c4c4c4;
+    padding-left: 10px;
+}
+
+.pick-time {
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.address-delivery {
+    margin-top: 35px;
+}
+
+.minsk {
+    padding-left: 6px;
+}
+
+.before-input {
+    margin-top: 24px;
+    margin-bottom: 7px;
+}
+
+
+/* Выбор магазина */
+
+.shop-check-input {
+    display: none;
+    margin-top: 80px;
+}
+
+.check-text {
+    position: absolute;
+    top: 73px;
+    left: 4px;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.shop {
+    float: left;
+    /* border: 1px solid green; */
+    width: 100px;
+    height: 85px;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.shop-img {
+    width: 90px;
+    height: 65px;
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    /* border: 1px solid grey; */
+    border-radius: 5px;
+    position: absolute;
+    cursor: pointer;
+    margin-left: 3px;
+}
+
+.checkmark-img {
+    display: none;
+    width: 18px;
+    position: absolute;
+    top: 1.5px;
+    left: 77px;
+}
+
+
+/* Третий этап - Контакты */
+
+#stageThreeButton {
+    margin-top: 50px;
+}
+
+
+/* Четвертый этап - Оплата */
+
+#stageFourButton {
+    margin-top: 60px;
+}
+
+.passed-number {
+    background-color: #99c72a;
+}
+
+.payment-form {
+    margin-top: -5px;
+    margin-bottom: 5px;
+}
+
+.online-payment-cont {
+    display: none;
+    width: 320px;
+    float: left;
+    /* border: 1px solid salmon; */
+    margin-top: 30px;
+    margin-left: -10px;
+}
+
+.order-box {
+    width: 90px;
+    float: left;
+    font-size: 13px;
+    color: #000000;
+    opacity: 0.5;
+    padding-left: 10px;
+}
+
+.number-order-box {
+    float: left;
+    margin-left: 50px;
+    font-size: 13px;
+}
+
+.sum-input {
+    width: 172px;
+    height: 32px;
+    border-radius: 5px;
+    border: 1px solid #c4c4c4;
+    padding-left: 10px;
+    margin-top: 1px;
+    margin-bottom: 12px;
+    margin-left: -5px;
+    outline: none;
+}
+
+.sum-input::placeholder {
+    color: #000000;
+    text-align: right;
+}
+
+.line {
+    border-width: 1.5px;
+    margin-top: 135px;
+}
+
+
+/* Карта */
+
+.card-wrapper {
+    /* width: 352px;
+    height: 178.58px; */
+    width: 320px;
+    height: 162.35px;
+    position: relative;
+}
+
+.card-back,
+.card-front {
+    /* width: 250.76px;
+    height: 160.77px; */
+    width: 227.96px;
+    height: 146.15px;
+    border: 1px solid lightgrey;
+    border-radius: 7px;
+    position: absolute;
+}
+
+.card-back {
+    right: 0;
+    bottom: 0;
+    background: #e0ddd6;
+}
+
+.card-front {
+    background: #f0f0ee;
+}
+
+.card-back-line {
+    /* width: 249.76px;
+    height: 37.5px; */
+    width: 227.05px;
+    height: 34.09px;
+    background: #8e8b84;
+    position: absolute;
+    top: 21.31px;
+}
+
+.cvc {
+    position: absolute;
+    right: 31.82px;
+    bottom: 47.73px;
+    width: 42.87px;
+    padding: 2.34px;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid lightgray;
+}
+
+.card-back-text {
+    position: absolute;
+    right: 5px;
+    bottom: 12px;
+    width: 70px;
+    font-size: 10px;
+    color: #000000;
+    opacity: 0.5;
+}
+
+.card-number {
+    position: absolute;
+    width: 90%;
+    height: 23.64px;
+    font-size: 16px;
+    padding: 6px;
+    top: 61.78px;
+    left: 5%;
+    border: 1px solid lightgray;
+}
+
+.card-to-month,
+.card-to-year {
+    position: absolute;
+    padding: 2.34px;
+    font-size: 15px;
+    border: 1px solid lightgray;
+    width: 32.73px;
+    height: 25.45px;
+    text-align: center;
+    left: 5%;
+    bottom: 10%;
+}
+
+.card-to-year {
+    left: 27%;
+}
+
+.valid-thru {
+    position: absolute;
+    left: 5%;
+    bottom: 30%;
+    font-size: 10px;
+    color: #000000;
+    opacity: 0.5;
+}
+
+.slash {
+    position: absolute;
+    left: 22.5%;
+    bottom: 15%;
+    font-size: 12px;
+    color: #000000;
+    opacity: 0.5;
+}
+
+.card-visa,
+.card-master,
+.card-maestro {
+    position: absolute;
+    width: 36.36px;
+    top: 10%;
+}
+
+.card-visa {
+    right: 5%;
+}
+
+.card-master {
+    right: 25%;
+}
+
+.card-maestro {
+    right: 45%;
+}
